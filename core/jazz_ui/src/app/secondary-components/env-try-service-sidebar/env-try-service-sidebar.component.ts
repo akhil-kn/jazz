@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output} from '@angular/core';
 import {SessionStorageService} from "../../core/helpers/session-storage.service";
 import {RelaxedJsonService} from "../../core/helpers/relaxed-json.service";
-import {HttpModule} from '@angular/http';
+import {HttpClientModule} from '@angular/common/http';
 import {RequestService} from "../../core/services";
 
 

@@ -1,7 +1,7 @@
 import { Component, OnInit, ComponentFactoryResolver, ReflectiveInjector, ElementRef ,EventEmitter, Output, Inject, Input,ViewChild} from '@angular/core';
 import { RequestService } from "../../core/services";
 import { Router, ActivatedRoute } from '@angular/router';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { DataCacheService , AuthenticationService } from '../../core/services/index';
 import { FilterTagsComponent } from '../../secondary-components/filter-tags/filter-tags.component';
 import { AdvancedFiltersComponent } from './../../secondary-components/advanced-filters/internal/advanced-filters.component';

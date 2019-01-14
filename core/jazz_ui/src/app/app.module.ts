@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { APP_INITIALIZER, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MomentModule } from 'angular2-moment';
 import { DatePickerModule } from './primary-components/daterange-picker/ng2-datepicker';
@@ -44,7 +44,7 @@ else{
     BrowserModule,
     FormsModule,
     DropdownModule,
-    HttpModule,
+    HttpClientModule,
     ToasterModule,
     NgIdleKeepaliveModule.forRoot(),
     SharedModule,

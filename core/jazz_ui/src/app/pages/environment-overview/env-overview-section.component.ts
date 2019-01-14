@@ -393,7 +393,7 @@ popup(state){
 
 
    myFunction() {
-    setTimeout( this.resetCopyValue(), 3000);
+    setTimeout(()=>{this.resetCopyValue()}, 3000);
  }
  
  resetCopyValue(){

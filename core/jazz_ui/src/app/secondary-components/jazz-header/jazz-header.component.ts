@@ -68,7 +68,7 @@ export class JazzHeaderComponent implements OnInit {
     }
 
     public goTosselected (link){
-        setTimeout(this.goToAbout(link), 10000);
+        setTimeout(()=>{this.goToAbout(link)}, 10000);
     }
 
     profileClick(){

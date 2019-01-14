@@ -17,8 +17,6 @@ import * as InternalComponents from './service.module.declarations.internal';
 import { AdvFilters }            from '../adv-filter.directive';
 import {AdvancedFilterService} from '../advanced-filter.service';
 
-import { Symbol } from 'rxjs';
-
 let routerRoutes:any;
 let specificComponents:any;
 let specificModules: any;

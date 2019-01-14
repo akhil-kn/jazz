@@ -1,4 +1,4 @@
-import { Directive, ViewContainerRef,  HostListener, OnInit, Renderer, Inject, Input } from '@angular/core';
+import { Directive, ViewContainerRef, HostListener, OnInit, Renderer, Inject, Input } from '@angular/core';
 import { SlimScrollOptions } from '../classes/slimscroll-options.class';
 
 @Directive({
@@ -46,10 +46,10 @@ export class SlimScrollDirective implements OnInit {
       this.mutationObserver = new MutationObserver(() => {
         if (this.mutationThrottleTimeout) {
           clearTimeout(this.mutationThrottleTimeout);
-          this.mutationThrottleTimeout = setTimeout(this.onMutation.bind(this), 50);
+          this.mutationThrottleTimeout = setTimeout(() => this.onMutation.bind(this), 50);
         }
       });
-      this.mutationObserver.observe(this.el, {subtree: true, childList: true});
+      this.mutationObserver.observe(this.el, { subtree: true, childList: true });
     }
   }
 
@@ -242,8 +242,8 @@ export class SlimScrollDirective implements OnInit {
     }
     wrapper.parentNode.replaceChild(docFrag, wrapper);
   }
-    @HostListener('window:resize', ['$event'])
-    onResize($event: any) {
-        this.getBarHeight()
-    }
+  @HostListener('window:resize', ['$event'])
+  onResize($event: any) {
+    this.getBarHeight()
+  }
 }

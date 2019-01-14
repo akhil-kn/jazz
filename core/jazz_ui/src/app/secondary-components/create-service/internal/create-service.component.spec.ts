@@ -72,7 +72,8 @@ import { Error404Component } from '../../../pages/error404/error404.component';
 import { PopoverModule } from 'ng2-popover';
 import { NgIdleKeepaliveModule } from '@ng-idle/keepalive';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule , BaseRequestOptions, Connection} from '@angular/http';
+import { BaseRequestOptions, Connection} from '@angular/http';
+import { HttpClientModule} from '@angular/common/http';
 import { AuthenticationService, RouteGuard, DataCacheService, RequestService, MessageService } from '../../../core/services';
 import { RouterModule, Routes } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -133,7 +134,7 @@ describe('CreateServiceComponent', () => {
     );
     TestBed.configureTestingModule({
       declarations: [CreateServiceComponent, MyFilterPipe, ServicesListComponent],
-      imports: [FormsModule, ReactiveFormsModule, BrowserModule, DropdownModule, PopoverModule, HttpModule],
+      imports: [FormsModule, ReactiveFormsModule, BrowserModule, DropdownModule, PopoverModule, HttpClientModule],
       providers: [
         ToasterService, CronParserService, DataCacheService,
         MockBackend,BaseRequestOptions,

@@ -23,7 +23,7 @@ npm install ng2-slimscroll
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { SlimScrollModule } from 'ng2-slimscroll';
@@ -35,7 +35,7 @@ import { SlimScrollModule } from 'ng2-slimscroll';
   imports: [
     BrowserModule,
     CommonModule,
-    HttpModule,
+    HttpClientModule,
     FormsModule,
     SlimScrollModule
   ],
